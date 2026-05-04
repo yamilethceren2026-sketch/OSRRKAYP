@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="OSRRKAYP.BusinessLogic/OSRRKAYP.BusinessLogic.csproj" />
+  <Project Path="OSRRKAYP.DataAccess/OSRRKAYP.DataAccess.csproj" />
+  <Project Path="OSRRKAYP.Entities/OSRRKAYP.Entities.csproj" />
+  <Project Path="OSRRKAYP.WebApplication/OSRRKAYP.WebApplication.csproj" />
+</Solution>
