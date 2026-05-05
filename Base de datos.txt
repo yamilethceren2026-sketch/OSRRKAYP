@@ -1,0 +1,33 @@
+Scaffold-DbContext -Connection "Server=localhost\SQLEXPRESS; Database=OSRRKAYP; User Id=sa; Password=321; Encrypt=False; TrustServerCertificate=True;" -Provider Microsoft.EntityFrameworkCore.SqlServer -OutputDir "../ESFE.Entities" -ContextDir "Database" -Context "QuotationContext" -Namespace "ESFE.Entities" -ContextNamespace "ESFE.DataAccess"
+
+
+
+6. Instrumentos Musicales 
+
+CREATE TABLE Roles (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    LevelName VARCHAR(60),
+    IsAvailable BIT
+);
+
+CREATE TABLE Users (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    RoleId INT NOT NULL,
+    Alias VARCHAR(50) NOT NULL,
+    EncryptedPassword VARCHAR(255),
+    FOREIGN KEY (RoleId) REFERENCES Roles(Id)
+);
+
+CREATE TABLE Manufacturers (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    CompanyName VARCHAR(150) NOT NULL
+);
+
+CREATE TABLE MusicalInstruments (
+    Id BIGINT IDENTITY(1,1) PRIMARY KEY,
+    ManufacturerId INT NOT NULL,
+    Name VARCHAR(200) NOT NULL,
+    PublicPrice DECIMAL(18,2),
+    CurrentInventory INT,
+    FOREIGN KEY (ManufacturerId) REFERENCES Manufacturers(Id)
+);
