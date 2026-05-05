@@ -1,4 +1,4 @@
-Scaffold-DbContext -Connection "Server=localhost\SQLEXPRESS; Database=OSRRKAYP; User Id=sa; Password=321; Encrypt=False; TrustServerCertificate=True;" -Provider Microsoft.EntityFrameworkCore.SqlServer -OutputDir "../ESFE.Entities" -ContextDir "Database" -Context "QuotationContext" -Namespace "ESFE.Entities" -ContextNamespace "ESFE.DataAccess"
+Scaffold-DbContext -Connection "Server=localhost\SQLEXPRESS; Database=OSRRKAYP; User Id=sa; Password=3213; Encrypt=False; TrustServerCertificate=True;" -Provider Microsoft.EntityFrameworkCore.SqlServer -OutputDir "../OSRRKAYP.Entities" -ContextDir "Database" -Context "QuotationContext" -Namespace "OSRRKAYP.Entities" -ContextNamespace "OSRRKAYP.DataAccess"
 
 
 
