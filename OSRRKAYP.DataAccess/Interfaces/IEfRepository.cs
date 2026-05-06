@@ -1,10 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Ardalis.Specification;
 
 namespace OSRRKAYP.DataAccess.Interfaces
 {
-    internal interface IEfRepository
+    public interface IEfRepository<T> : IRepositoryBase<T> where T : class
     {
+        Task BeginTransactionAsync();
+        Task CommitAsync();
+        Task RollbackAsync();
     }
 }
