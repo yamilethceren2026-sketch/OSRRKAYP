@@ -5,6 +5,8 @@ namespace OSRRKAYP.Entities;
 
 public partial class MusicalInstrument
 {
+    public long MusicalInstrumentId;
+
     public long Id { get; set; }
 
     public int ManufacturerId { get; set; }

@@ -17,4 +17,9 @@
     <ProjectReference Include="..\OSRRKAYP.Entities\OSRRKAYP.Entities.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="UseCases\MusicalInstrumentsTation\Commands\" />
+    <Folder Include="UseCases\MusicalInstrumentsTation\Queries\" />
+  </ItemGroup>
+
 </Project>
