@@ -12,16 +12,21 @@ using System.Threading.Tasks;
 namespace OSRRKAYP.BusinessLogic.UseCases.MusicalInstrumentsTation.CreateMusicalInstruments
 {
     // Handler corregido: inyección por constructor, firma correcta de Handle
-    internal sealed class CreateProduct : IRequestHandler<CreateProductDto, long>
+    internal sealed class CreateHanler : CreateProductCommandBase, IRequestHandler<CreateHanler, long>, ICreateProduct, ICreateProduct1, ICreateProduct2, ICreateProductCommand
     {
         private CancellationToken cancellationToken;
+        private IEfRepository<MusicalInstrument> _repository;
+        private object request;
 
-        public CreateProduct(IEfRepository<MusicalInstrument> repository)
+
+        public CreateHanler(CancellationToken cancellationToken, IEfRepository<MusicalInstrument> repository, object request)
         {
-            _repository = repository ?? throw new ArgumentNullException(nameof(repository));
+            this.cancellationToken = cancellationToken;
+            _repository = repository;
+            this.request = request;
         }
 
-        public async Task<long> Handle(CreateProductDto CancellationToken CreateProductDto)
+        public async Task<long> Handle(CreateHanler CancellationToken CreateHanler)
         {
             try
             {
