@@ -4,6 +4,6 @@ namespace OSRRKAYP.BusinessLogic.UseCases.MusicalInstrumentsTation.CreateMusical
 {
     internal interface ICreateProductCommand
     {
-        Task<long> Handle(CreateHanler CancellationToken, CreateHanler );
+        Task<long> Handle(Product CancellationToken, Product );
     }
 }
