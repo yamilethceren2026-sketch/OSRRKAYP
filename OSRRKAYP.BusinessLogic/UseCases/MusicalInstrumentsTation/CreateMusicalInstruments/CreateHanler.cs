@@ -31,6 +31,8 @@ namespace OSRRKAYP.BusinessLogic.UseCases.MusicalInstrumentsTation.CreateMusical
             this.request = request;
         }
 
+        public long Id { get; internal set; }
+
         public override bool Equals(object? obj)
         {
             return obj is Product hanler &&

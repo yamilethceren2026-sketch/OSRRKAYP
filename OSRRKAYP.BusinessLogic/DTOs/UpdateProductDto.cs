@@ -2,14 +2,26 @@
 {
     public class UpdateProductDto
     {
-        public long Id { get; set; }
+        public long ProductId { get; set; }
 
-        public int ManufacturerId { get; set; }
+        public int BrandId { get; set; }
 
-        public string Name { get; set; } = null!;
+        public string? SupplierName { get; set; }
 
-        public decimal PublicPrice { get; set; }
+        public string? ProductCode { get; set; }
 
-        public int CurrentInventory { get; set; }
+        public string? ProductName { get; set; }
+
+        public string? ProductDescription { get; set; }
+
+        public string? ProductImage { get; set; }
+
+        public decimal? PriceUnitPurchase { get; set; }
+
+        public decimal? PriceUnitSale { get; set; }
+
+        public int? Stock { get; set; }
+
+        public bool ProductStatus { get; set; }
     }
 }

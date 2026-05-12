@@ -1,9 +1,9 @@
-﻿using OSRRKAYP.BusinessLogic.DTOs;
+﻿using OSRRKAYP.Entities;
 
 namespace OSRRKAYP.BusinessLogic.UseCases.MusicalInstrumentsTation.CreateMusicalInstruments
 {
     internal interface ICreateProductCommand
     {
-        Task<long> Handle(Product CancellationToken, Product );
+        Task<long> Handle(Product request, CancellationToken cancellationToken);
     }
 }
