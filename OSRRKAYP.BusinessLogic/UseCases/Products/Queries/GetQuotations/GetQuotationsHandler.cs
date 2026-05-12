@@ -14,7 +14,9 @@ namespace OSRRKAYP.BusinessLogic.UseCases.Products.Queries.GetQuotations
         private readonly IEfRepository<Quotation> _repository;
 
         public GetQuotationsHandler
-            (IEfRepository<Quotation> repository)
+        (
+            IEfRepository<Quotation> repository
+        )
         {
             _repository = repository;
         }

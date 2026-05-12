@@ -1,12 +1,14 @@
-﻿namespace OSRRKAYP.BusinessLogic.UseCases.Products.Queries.GetQuotation
-{
-    internal class GetQuotationSpec : Ardalis.Specification.ISpecification<Quotation>
-    {
-        private long quotationId;
+﻿using Ardalis.Specification;
+using OSRRKAYP.Entities;
 
-        public GetQuotationSpec(long quotationId)
+namespace OSRRKAYP.BusinessLogic.UseCases.Products.Queries.GetQuotation
+{
+    internal sealed class GetQuotationQuery
+        : Specification<Quotation>
+    {
+        public GetQuotationQuery (long quotationId)
         {
-            this.quotationId = quotationId;
+            Query.Where(q => q.QuotationId == quotationId);
         }
     }
 }
